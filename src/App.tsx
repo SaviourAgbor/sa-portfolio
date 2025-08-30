@@ -9,6 +9,7 @@ import SkillsMain from "./components/skillsSection/SkillsMain";
 import HorizontalLine from "./components/HorizontalLine";
 import ExperienceMain from "./components/experienceSection/ExperienceMain";
 import ProjectsMain from "./components/projectsSection/ProjectsMain";
+import ContactMeMain from "./components/contactMeSection/ContactMeMain";
 
 function App() {
   return (    <div className="font-JosefinSans w-full overflow-hidden max-w-screen min-w-xs">
@@ -24,6 +25,8 @@ function App() {
       <HorizontalLine />
       <ProjectsMain />
       <HorizontalLine />
+      <ContactMeMain />
+      <HelperSection />
     </div>
   );
 }

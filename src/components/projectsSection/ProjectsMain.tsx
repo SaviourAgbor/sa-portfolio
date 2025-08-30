@@ -1,6 +1,6 @@
 import ProjectsText from './ProjectsText'
-import SingleProject from './SingleProject'
 import projectImg from "../../../public/images/website-img-4.jpg"
+import ProjectsGroup from './projectsGroup'
 
 
 const projects = [
@@ -28,11 +28,7 @@ const ProjectsMain = () => {
   return (
     <div className='mx-auto max-w-[1200px] mt-[80px] px-10'>
       <ProjectsText />
-      <div className='bg-white'>
-        {projects.map((project,index) => {
-          return <SingleProject key={index} project={project} />
-        })}
-      </div>
+      <ProjectsGroup projects={projects}/>
     </div>
   )
 }
