@@ -41,7 +41,7 @@ function AllExperiences() {
     <div className="flex flex-col md:flex-row items-center justify-around md:gap-6">
       {experiences.map((experience, index) => {
         return (
-          <SingleExpeience key={index} experience={experience} />
+          <SingleExpeience key={index} experience={experience} index={index}/>
         );
       })}
     </div>

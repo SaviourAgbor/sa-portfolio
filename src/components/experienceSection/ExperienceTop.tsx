@@ -1,4 +1,6 @@
 // import { useState } from "react";
+import { motion } from "framer-motion";
+import { fadeIn } from "../../framerMotion/variants";
 import ExperienceTopLeft from "./ExperienceTopLeft";
 import ExperienceTopMiddle from "./ExperienceTopMiddle";
 import ExperienceTopRight from "./ExperienceTopRight";

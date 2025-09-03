@@ -1,7 +1,13 @@
-
-function ExperienceSingle({experience}) {
+import {motion} from 'framer-motion'
+import {fadeIn} from "../../framerMotion/variants"
+function ExperienceSingle({experience, index}) {
   return (
-    <div className="mt-10 h-auto w-full md:h-[440px] md:w-[300px] lg:h-[350px] border-2 border-dashed border-orange/40 rounded-xl p-4">
+    <motion.div 
+    variants={fadeIn("up", index * 0.5)}
+    initial="hidden"
+    whileInView="show"
+    viewport={{ once: false, amount: 0.3 }}
+    className="mt-10 h-auto w-full md:h-[440px] md:w-[300px] lg:h-[350px] border-2 border-dashed border-orange/40 rounded-xl p-4">
       <p className="text-cyan font-bold">{experience.job}</p>
       <p className="text-orange">{experience.company}</p>
       <p className="text-lightGrey">{experience.date}</p>
@@ -11,7 +17,7 @@ function ExperienceSingle({experience}) {
         
         })}
       </ul>
-    </div>
+    </motion.div>
   )
 }
 
