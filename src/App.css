@@ -27,6 +27,13 @@
   --shadow-cyanMediumShadow: 10px 10px 200px 150px rgba(94,206,220,0.5);
   --shadow-orangeMediumShadow: 10px 10px 200px 150px rgba(240,169,79,0.5);
 
+  --text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4);
+  --text-shadow-lg: 0px 8px 6px rgba(0, 0, 0, 0.4);
+  --text-shadow-xl: 0px 12px 9px rgba(0, 0, 0, 0.4);
+  --text-shadow-2xl: 0px 16px 12px rgba(0, 0, 0, 0.4);
+  --text-shadow-3xl: 0px 20px 15px rgba(0, 0, 0, 0.4);
+
+
   --breakpoint-xs: 420px;
   --breakpoint-sm: 640px;
   --breakpoint-md: 768px;
