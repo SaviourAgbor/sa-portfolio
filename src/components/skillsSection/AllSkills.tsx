@@ -1,3 +1,5 @@
+import {motion} from 'framer-motion'
+import {fadeIn} from "../../framerMotion/variants"  
 import { FaHtml5, FaCss3Alt, FaReact} from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
 import { RiTailwindCssFill, RiNextjsFill } from "react-icons/ri";
@@ -27,7 +29,15 @@ const AllSkills = () => {
     <div>
       <div className="lg:flex justify-center align-center grid grid-cols-3 md:grid-cols-4 gap-4 md:gap-8 mt-15">
         {skills.map((item,index) => {
-           return <SingleSkill key={index} text={item.skill} imgSvg={<item.icon />} />
+           return <motion.div
+           key={index}
+           variants={fadeIn("up", `${index * 0.2}`)}
+           initial="hidden"
+           whileInView="show"
+           viewport={{ once: false, amount: 0.2 }}
+           >
+            <SingleSkill text={item.skill} imgSvg={<item.icon />} />
+           </motion.div>
       })}
       </div>
     </div>
