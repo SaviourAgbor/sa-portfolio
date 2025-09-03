@@ -1,23 +1,38 @@
+import {motion} from "framer-motion"
+import {fadeIn} from "../../framerMotion/variants"
+
 const HeroText = () => {
   return (
-    <div className="flex flex-col xs:text-center md:text-left left justify-center gap-4 h-full ">
-      <h2 className="lg:text-2xl text-xl uppercase text-grey">
+    <div className="flex flex-col xs:text-center md:text-left left justify-center gap-2 h-full mt-8 ">
+      <motion.h2
+        variants={fadeIn("up", 0.3)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.7 }}
+       className="lg:text-xl text-xl uppercase text-cyan/70">
         Front-End web Developer
-      </h2>
-      <h1 className="text-4xl md:text-[2.5rem] lg:text-6xl text-orange font-bold">
-        SAVIOUR AGBOR
-      </h1>
-      <p className="xs:text-center md:text-left text-lg text-lightGrey mt-4 ">
-        Passionate Web-Developer <span className="text-2xl font-bold">/ </span>
-        Instructor. 
-        <br className="hidden md:block" /> 
+      </motion.h2>
+      <motion.h1
+        variants={fadeIn("right", 0.4)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.7 }}
+      className="text-4xl md:text-[2.5rem] lg:text-6xl text-orange font-bold">
+        Saviour Agbor
+      </motion.h1>
+      <motion.p 
+        variants={fadeIn("up", 0.5)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.7 }}
+      className="xs:text-center md:text-left text-lg text-lightGrey font-light ">
+        Passionate Web-Developer and Instructor. 
+        {/* <br className="hidden md:block" />  */}
         <br />
-        <span className="text-2xl text-cyan/">
-          React, JavaScript, TailwindCSS,
-          <span className="font-bold"> & </span>
-          TypeScript
+        <span className="text-md text-white font-thin">
+          React, JavaScript, TailwindCSS & TypeScript
         </span>
-      </p>
+      </motion.p>
     </div>
   );
 };

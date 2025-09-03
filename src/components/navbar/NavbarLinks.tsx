@@ -1,3 +1,5 @@
+import {Link} from "react-scroll"
+
 const links = [
   { link: "About", section: "about" },
   { link: "Skills", section: "skills" },
@@ -6,24 +8,33 @@ const links = [
   { link: "Contact", section: "contact" },
 ];
 
-const NavbarLinks = () => {
-  return (
-    <ul
-      className="
-    flex flex-col items-center gap-6 text-white font-semibold text-lg absolute top-[120%]
-    left-[50%] -translate-x-[50%] w-full py-4 bg-cyan/30 backdrop-blur-lg shadow-lg transition-all duration-500
+const NavbarLinks = ({toggleMenu}) => {
+ 
 
-    md:flex-row md:relative md:gap-4 md:translate-x-0 md:top-auto md:left-auto md:bg-black 
-    md:shadow-none md:backdrop-blur-0 md:py-0 md:w-auto lg:text-md">
+  return (
+    <ul 
+      className="
+    transition-all duration-500 flex flex-col w-full justify- md:flex-row gap-4 text-white absolute md:relative top-13 md:top-auto left-0 bg-cyan/40 py-2 md:bg-transparent backdrop-blur-lg rounded-b-lg md:rounded-none 
+    
+     items-center font-semibold text-lg  
+     shadow-[0_0_10px_cyan] md:shadow-none 
+
+    md:gap-4  md:left-auto
+    md:shadow- md:backdrop--0 md:py-0 md:w-auto lg:text-md">
       {links.map((link, index) => {
         return (
-          <li key={index} className="group w-full text-center">
-            <a
-              href="#"
-              className="hover:text-cyan transition-all duration-500 cursor:pointer sm:block">
+          <li key={index} className="group w-full text-center hover:scale-110 transition-all duration-1000 cursor-pointer">
+            <Link
+              to={link.section}
+              smooth={true}
+              spy={true}
+              duration={1000}
+              offset={-134}
+              onClick={toggleMenu}
+              className="hover:text-cyan transition-all duration-1000 cursor:pointer sm:block">
               {link.link}
-            </a>
-            <div className="mx-auto bg-cyan w-0 group-hover:w-full h-[1px] transition-all duration-500"></div>
+            </Link>
+            <div className="mx-auto bg-cyan w-0 group-hover:w-full h-[1px] transition-all duration-1000"></div>
           </li>
         );
       })}

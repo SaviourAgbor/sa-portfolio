@@ -1,8 +1,9 @@
 import NavbarLogo from "./NavbarLogo";
 import NavbarLinks from "./NavbarLinks";
 import NavbarBtn from "./NavbarBtn";
-import { GiHamburgerMenu } from "react-icons/gi";
+
 import { useState } from "react";
+import NavbarIcon from "./NavbarGroup";
 
 const NavbarMain = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -11,19 +12,16 @@ const NavbarMain = () => {
     setMenuOpen(!menuOpen);
   };
   return (
-    <nav className="max-w-[1300px] mx-auto px-4 w-full fixed left-[50%] -translate-x-[50%] z-20 flex gap-4 mt-2">
-      <div className="flex items-center justify-between w-full max-w-[1200px] mx-auto bg-black item-center 
-        rounded-full border-[0.5px] border-lightOrange p-6 md:gap-6">
+    <nav className="px-8 pt-2 w-full flex fixed justify-center z-20  items-center">
+      <div className=" flex justify-between px-6 md:py-4 lg:py-8 w-full gap-10 items-center bg-black rounded-full border  border-lightOrange">
         <NavbarLogo />
-        <div className={`${menuOpen ? "block" : "hidden"} md:block`}>
-          <NavbarLinks />
+        <div className={`${menuOpen ? "block" : "hidden"} absolute w-full left-0 md:relative md:block`}>
+          <NavbarLinks toggleMenu={toggleMenu} />
         </div>
         <NavbarBtn />
-      </div>
-      <div className="md:hidden sm:block flex text-center items-center justify-center p-6 bg-black rounded-full border-[0.5px] border-lightOrange">
-        <button onClick={toggleMenu} className="text-white text-2xl p-3 border-[0.5px] border-lightOrange rounded-full">
-          <GiHamburgerMenu />
-        </button>
+        <div className="md:hidden">
+          <NavbarIcon toggleMenu={toggleMenu} menuOpen={menuOpen} />
+        </div>
       </div>
     </nav>
   );
