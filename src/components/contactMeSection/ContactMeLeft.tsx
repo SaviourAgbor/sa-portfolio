@@ -1,3 +1,5 @@
+import {motion} from "framer-motion"  
+import {fadeIn} from "../../framerMotion/variants"
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { useState } from "react";
@@ -6,7 +8,9 @@ const ContactMeLeft = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [success, setSuccess] = useState("");
+  const [success, setSuccess] = useState(false);
+  const [successMessage, setSuccessMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleName = (e) => {
     setName(e.target.value);
@@ -32,10 +36,22 @@ const ContactMeLeft = () => {
           setName("");
           setEmail("");
           setMessage("");
-          setSuccess("Message sent successfully");
+          setSuccess(true);
+          setSuccessMessage("Message sent successfully!");
+
+          setTimeout(() => {
+            setSuccess(false);
+          }, 2000);
         },
         (error) => {
           console.log("FAILED...", error.text);
+          const delayError = setTimeout(() => {setErrorMessage("Something went wrong, please try again later!!");}, 1000)
+          
+          setTimeout(() => {
+            delayError
+            
+            setErrorMessage("");
+          }, 4000);
         }
       );
   };
@@ -57,6 +73,26 @@ const ContactMeLeft = () => {
           You are just a few clicks away!
         </p>
       </div>
+      {success && (
+        <motion.div 
+          initial={{ opacity: 0, y: -70 }}
+          animate={{ opacity: 2, y: 0 }}
+          transition={{ duration: 0.6 }}
+
+        className="p-2 mb-2 text-xl text-green-700 w-fit bg-green-100 text-center rounded-lg dark:bg-green-700 dark:text-green-800" >
+          {successMessage}
+        </motion.div>
+      )}
+
+      {errorMessage && (
+        <motion.div 
+          initial={{ opacity: 0, y: -70 }}
+          animate={{ opacity: 2, y: 0 }}
+          transition={{ duration: 0.6 }}
+        className="p-1 mb-2 text-xl text-red-700 w-fit bg-red-100 text-center rounded-lg dark:bg-red-700 dark:text-red-800">
+          {errorMessage}
+        </motion.div>
+      )}
 
       <form
         className="flex flex-col gap-2 text-[1.2em] font-bold"
@@ -92,7 +128,7 @@ const ContactMeLeft = () => {
         <button
           type="submit"
           onKeyDown={handleKeyDown}
-          className="rounded-lg py-2 text-white cursor-pointer font-bold flex justify-center items-center h-10 bg-cyan text-[1em] hover:bg-cyan/90 transition-all duration-300 mt-2"
+          className="rounded-lg py-2 text-white cursor-pointer font-bold flex justify-center items-center h-10 bg-cyan text-[1em] hover:bg-cyan/80 hover:scale-101 transition-all duration-300 mt-2"
         >
           Send
         </button>

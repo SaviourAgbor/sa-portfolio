@@ -1,12 +1,16 @@
+import {motion} from 'framer-motion'  
+import {fadeIn} from "../../framerMotion/variants"
 
-const SingleSocialIcon = ({link, Icon, hoverIconColor, hoverBackgroundColor}) => {
-  console.log(hoverIconColor, hoverBackgroundColor);
+const SingleSocialIcon = ({ icon, index}) => {
   return (
-    <div className={`text-3xl text-orange cursor-pointer p-1 border border-orange rounded-full hover:bg-${hoverBackgroundColor} hover:text-${hoverIconColor} transition-all duration-1000 hover:border-transparent`}>
-      <a href={link} target="_blank" >
-        <Icon/ >
-      </a>
-    </div>
+    <motion.div 
+    variants={fadeIn("up", index * 0.1)}
+    initial="hidden"
+    whileInView="show"
+    viewport={{ once: false, amount: 0.5 }}
+    className={`text-3xl text-orange cursor-pointer p-1 border border-orange rounded-full hover:bg-${icon.hoverBackgroundColor} hover:text-${icon.hoverIconColor} transition-all duration-1000 hover:border-transparent`}>
+      <icon.Icon/>
+    </motion.div>
   )
 }
 
