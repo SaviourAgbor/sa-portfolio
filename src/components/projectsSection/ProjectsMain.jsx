@@ -1,6 +1,6 @@
 import ProjectsText from './ProjectsText'
 import projectImg from "../../../public/images/website-img-4.jpg"
-import ProjectsGroup from './projectsGroup'
+import ProjectsGroup from './ProjectsGroup'
 
 
 const projects = [

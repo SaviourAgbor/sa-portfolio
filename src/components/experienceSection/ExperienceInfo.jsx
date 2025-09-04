@@ -1,5 +1,5 @@
 
-function ExperienceInfo({number, text}: {number: string, text: string}) {
+function ExperienceInfo({number, text}) {
   return (
     <div className="text-center">
       <p className="font-bold text-2xl md:text-6xl text-cyan ">{number}</p>

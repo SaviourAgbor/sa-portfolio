@@ -1,5 +1,5 @@
 import {motion} from 'framer-motion'  
-import {fadeIn} from "../../src/framerMotion/variants"
+import {fadeIn} from "../framerMotion/variants"
 const HorizontalLine = () => {
   return (
     <motion.div 
