@@ -25,7 +25,7 @@ const HeroText = () => {
         initial="hidden"
         whileInView={"show"}
         viewport={{ once: false, amount: 0.7 }}
-      className="xs:text-center md:text-left text-lg leading-5 text-white font-light ">
+      className="xs:text-center md:text-left text-lg leading-5 text-white/80 font-light ">
         Passionate Web-Developer<br /> and Instructor. 
        
       </motion.p>

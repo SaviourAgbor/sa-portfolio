@@ -10,7 +10,7 @@ function ExperienceTopMiddle() {
     viewport={{ once: false, amount: 0.3 }}
     className="w-[80%] flex alighn-center justify-center lg:w-[35%] ">
       <img
-        src="../../../public/images/experience-image.png"
+        src="/images/experience-image.png"
         alt="Experience Image"
       />
     </motion.div>
