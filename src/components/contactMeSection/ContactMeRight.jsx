@@ -1,6 +1,6 @@
 import {motion} from 'framer-motion'  
 import {fadeIn} from "../../framerMotion/variants"
-import contactEmailImg from "../../../public/images/email-image.png";
+import contactEmailImg from "/images/email-image.png";
 import { MdOutlineMail } from "react-icons/md";
 import { LiaPhoneSolid } from "react-icons/lia";
 import { TfiLocationPin } from "react-icons/tfi";

@@ -8,13 +8,13 @@ const projects = [
     name:'Fodcon app',
     date: 'Jan, 2025',
     align: 'right',
-    image: '../../../public/images/website-img-1.jpg',
+    image: '/images/website-img-1.jpg',
     link: '#'
   }, {
     name:'ALX Capstone Weather App',
     date: 'Nov, 2024',
     align: 'left',
-    image: '../../../public/images/website-img-2.webp',
+    image: '/images/website-img-2.webp',
     link: '#'
   }, {
     name:'Alx studio project',

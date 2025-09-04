@@ -44,7 +44,7 @@
 }
 
 .hexagon-image {
-  background-image: url('../../../public/images/sa-image.png');
+  background-image: url('/images/sa-image.png');
   clip-path: polygon(
     25% 0%, 75% 0%,
     100% 50%,
