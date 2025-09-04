@@ -15,7 +15,7 @@ import FooterMain from "./components/footerSection/FooterMain";
 
 function App() {
   return (
-    <div className="font-JosefinSans w-full overflow-hidden max-w-screen min-w-xs">
+    <div className="font-JosefinSans flex flex-col w-full overflow-hidden max-w-screen min-w-xs">
       <NavbarMain />
       <HeroMain />
       <HeroGradient />

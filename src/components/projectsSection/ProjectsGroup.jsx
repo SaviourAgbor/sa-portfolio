@@ -4,7 +4,7 @@ import {fadeIn} from "../../framerMotion/variants"
 import SingleProject from "./SingleProject";
 const ProjectsGroup = ({ projects }) => {
   return (
-    <div className="mt-10 flex flex-col">
+    <div className="flex flex-col">
       {projects.map((project, index) => {
         return <motion.div
           key={index}

@@ -3,7 +3,7 @@ import {fadeIn} from "../../framerMotion/variants"
 
 const HeroText = () => {
   return (
-    <div className="flex flex-col xs:text-center md:text-left left justify-center gap-2 h-full mt-8 ">
+    <div className="flex flex-col text-center md:text-left left justify-center gap-2 h-full mt-8 ">
       <motion.h2
         variants={fadeIn("up", 0.3)}
         initial="hidden"
@@ -25,13 +25,9 @@ const HeroText = () => {
         initial="hidden"
         whileInView={"show"}
         viewport={{ once: false, amount: 0.7 }}
-      className="xs:text-center md:text-left text-lg text-lightGrey font-light ">
-        Passionate Web-Developer and Instructor. 
-        {/* <br className="hidden md:block" />  */}
-        <br />
-        <span className="text-md text-white font-thin">
-          React, JavaScript, TailwindCSS & TypeScript
-        </span>
+      className="xs:text-center md:text-left text-lg leading-5 text-white font-light ">
+        Passionate Web-Developer<br /> and Instructor. 
+       
       </motion.p>
     </div>
   );

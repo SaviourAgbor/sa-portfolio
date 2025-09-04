@@ -11,11 +11,11 @@ const NavbarBtn = () => {
     offset={-134}
     >
       <button
-      className="hover:cursor-pointer flex relative items-center gap-1 bg-gradient-to-r 
-    from-cyan to-orange hover:scale-110 hover:shadow-[0_0_10px_cyan] transition-all duration-500 
-    text-white border-cyan border-[1px] hover:border-orange  px-4 py-2 rounded-full ">
+      className="hover:cursor-pointer flex relative items-center gap-1 bg-gradient-to-r
+    from-darkBrown via-cyan to darkBrown font-bold-4xl text-xl hover:scale-110 hover:shadow-[0_0_10px_cyan] transition-all duration-500 
+    text-white hover:border-orange  px-4 leading-5 py-1 rounded-xl animate-[bounce_3s_ease-in-out_infinite] ">
       Hire Me
-      <div className="hidden md:block ">
+      <div className="hidden md:block text-orange ">
         <RiArrowRightDownLine />
       </div>
     </button>

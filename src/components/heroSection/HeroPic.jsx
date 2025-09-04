@@ -13,7 +13,7 @@ const HeroPic = () => {
         viewport={{ once: false, amount: 0.01 }}
       className="flex justify-center  items-center h-[300px] w-[300px] sm:h-[500px] sm:w-[500px] animate-[pulse_10s_linear_infinite]">
         <div    
-        className="hover:translate-y-5  transition-all duration-500  border-[20px] border-cyan/10 w-80 h-80 sm:w-90 sm:h-90 bg-center bg-no-repeat bg-contain hexagon-image"></div>
+        className="hover:translate-y-5  transition-all duration-500  border-x-[20px] border-cyan/10 w-80 h-80 sm:w-90 sm:h-90 bg-center bg-no-repeat bg-contain hexagon-image"></div>
       </motion.div>
       <motion.div 
       variants={fadeIn("down", 0.5)}

@@ -9,8 +9,9 @@
   
   --color-brown: #53423e;
   --color-lightBrown: #645550;
-  --color-darkBrown: #2c2523;
-  --color-black: #1e1917;
+  --color-darkBrown: #00112b; /*darkBlue*/
+  --color-black: #081525; /*NavyBlue*/
+  /* --color-black: #040a14;  */
   --color-white: #f1e1d9;
   --color-cyan: #15d1e9;
   --color-lightCyan: #88e5f0;
