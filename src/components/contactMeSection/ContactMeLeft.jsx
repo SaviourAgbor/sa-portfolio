@@ -1,5 +1,5 @@
-import {motion} from "framer-motion"  
-import {fadeIn} from "../../framerMotion/variants"
+import { motion } from "framer-motion";
+import { fadeIn } from "../../framerMotion/variants";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { useState } from "react";
@@ -45,11 +45,13 @@ const ContactMeLeft = () => {
         },
         (error) => {
           console.log("FAILED...", error.text);
-          const delayError = setTimeout(() => {setErrorMessage("Something went wrong, please try again later!!");}, 1000)
-          
+          const delayError = setTimeout(() => {
+            setErrorMessage("Something went wrong, please try again later!!");
+          }, 1000);
+
           setTimeout(() => {
-            delayError
-            
+            delayError;
+
             setErrorMessage("");
           }, 4000);
         }
@@ -68,28 +70,29 @@ const ContactMeLeft = () => {
         <h1 className="text-2xl font-bold text-orange animate-pulse">
           Get In Touch
         </h1>
-        <p className="text-sm font-bold text-white my-3">
+        <p className="text-sm font-bold text-white  italic">
           Feel free to rech out if you'd like to colaborate <br />
-          You are just a few clicks away!
         </p>
+        <p className="pt-6 pb-2 font-bold text-white">LET'S CONNECT</p>
       </div>
       {success && (
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: -70 }}
           animate={{ opacity: 2, y: 0 }}
           transition={{ duration: 0.6 }}
-
-        className="p-2 mb-2 text-xl text-green-700 w-fit bg-green-100 text-center rounded-lg dark:bg-green-700 dark:text-green-800" >
+          className="p-2 mb-2 text-xl text-green-700 w-fit bg-green-100 text-center rounded-lg dark:bg-green-700 dark:text-green-800"
+        >
           {successMessage}
         </motion.div>
       )}
 
       {errorMessage && (
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: -70 }}
           animate={{ opacity: 2, y: 0 }}
           transition={{ duration: 0.6 }}
-        className="p-1 mb-2 text-xl text-red-700 w-fit bg-red-100 text-center rounded-lg dark:bg-red-700 dark:text-red-800">
+          className="p-1 mb-2 text-xl text-red-700 w-fit bg-red-100 text-center rounded-lg dark:bg-red-700 dark:text-red-800"
+        >
           {errorMessage}
         </motion.div>
       )}
@@ -99,32 +102,61 @@ const ContactMeLeft = () => {
         ref={form}
         onSubmit={sendEmail}
       >
-        <input
-          type="text"
-          name="from_name"
-          placeholder="Your Name"
-          value={name}
-          onChange={handleName}
-          required
-          className="bg-lightGrey/70 relative rounded-lg p-2 text-white/95 hover:border-transparent focus:outline-none focus:border focus:border-cyan/70"
-        />
-        <input
-          type="email"
-          name="from_email"
-          placeholder="Your Email"
-          value={email}
-          onChange={handleEmail}
-          required
-          className="bg-lightGrey/70 rounded-lg p-2  text-white/95 focus:outline-none focus:border focus:border-cyan/70 "
-        />
-        <textarea
-          name="message"
-          id="message"
-          value={message}
-          onChange={handleMessage}
-          placeholder="Message"
-          className="bg-lightGrey/70 rounded-lg p-2 h-50 text-white/95 focus:outline-none focus:ring-0 hover:border-transparent focus:border focus:border-cyan/70"
-        ></textarea>
+        <div className="relative">
+          <input
+            type="text"
+            name="from_name"
+            id="name"
+            placeholder="qwdfds"
+            value={name}
+            onChange={handleName}
+            required
+            className="peer w-full pt-6 bg-lightGrey/70 relative rounded-lg p-2 text-white hover:border-transparent placeholder-transparent focus:outline-none focus:border focus:border-cyan/70"
+          />
+          <label
+            htmlFor="name"
+            className="absolute left-2 top-2  text-cyan/70 text-sm transition-all  duration-500 peer-placeholder-shown:top-5 peer-placeholder-shown:text-gray-200  peer-placeholder-shown:text-base peer-focus:top-2 peer-focus:text-sm peer-focus:text-cyan"
+          >
+            Your Name
+          </label>
+        </div>
+
+        <div className="relative">
+          <input
+            type="email"
+            id="email"
+            name="from_email"
+            placeholder=""
+            value={email}
+            onChange={handleEmail}
+            required
+            className="peer w-full bg-lightGrey/70 rounded-lg px-2 pb-2 pt-6 placeholder-transparent text-white/95 focus:outline-none focus:border focus:border-cyan/70 "
+          />
+          <label
+            htmlFor="email"
+            className="top-2 left-2 absolute text-cyan/70 text-sm transition-all duration-500 peer-placeholder-shown:top-5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-200 peer-focus:top-2 peer-focus:text-cyan peer-focus:text-sm "
+          >
+            Your Email
+          </label>
+        </div>
+
+        <div className="relative">
+          <textarea
+            name="message"
+            id="message"
+            value={message}
+            onChange={handleMessage}
+            placeholder="Message"
+            className="peer w-full bg-lightGrey/70 pt-7 rounded-lg p-2 h-50 text-white/95 focus:outline-none focus:ring-0 placeholder-transparent hover:border-transparent focus:border focus:border-cyan/70"
+          ></textarea>
+          <label
+            htmlFor="message"
+            className="absolute left-2 top-2  text-cyan/70 text-sm transition-all duration-500 peer-placeholder-shown:top-5 peer-placeholder-shown:text-gray-200 peer-placeholder-shown:text-base peer-focus:top-2 peer-focus:text-cyan peer-focus:text-sm "
+          >
+            Message
+          </label>
+        </div>
+
         <button
           type="submit"
           onKeyDown={handleKeyDown}

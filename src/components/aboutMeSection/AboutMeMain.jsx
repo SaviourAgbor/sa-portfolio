@@ -7,7 +7,7 @@ function AboutMeMain() {
   return (
     <div
       id="about"
-      className="md:flex sm:grid-cols-1 md:flex-row items-center justify-between gap-15 mx-auto md:max-w-[1200px] mt-15  px-10 lg:px-30 md:mt-[80px]"
+      className="md:flex sm:grid-cols-1 md:flex-row items-center justify-between gap-15 mx-auto md:max-w-[1200px] mt-15  px-5 md:px-10 lg:px-30 md:mt-[80px]"
     >
       <motion.div
         variants={fadeIn("right", 0.3)}

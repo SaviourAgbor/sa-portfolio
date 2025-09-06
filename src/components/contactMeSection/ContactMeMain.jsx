@@ -7,7 +7,7 @@ import ContactMeRight from "./ContactMeRight";
 
 const ContactMeMain = () => {
   return (
-    <div id="contact" className="mt-10 mx-10 max-w-[1200px]">
+    <div id="contact" className="mt-10 mx-5 md:mx-10 max-w-[1200px]">
       <h1 className="text-center text-4xl font-bold text-cyan mb-5">
         Contact Me
       </h1>
@@ -17,7 +17,7 @@ const ContactMeMain = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.2 }}
-      className="bg-lightBrown p-6 rounded-xl flex flex-col items-center md:flex-row md:justify-between gap-14">
+      className="bg-lightBrown p-2 pt-5 rounded-xl flex flex-col items-center md:flex-row md:justify-between gap-14">
         <ContactMeLeft />
         <ContactMeRight />
       </motion.div>

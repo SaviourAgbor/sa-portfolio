@@ -8,7 +8,7 @@ const NavbarBtn = () => {
     smooth={true}
     spy={true}
     duration={1000}
-    offset={-134}
+    offset={-85}
     >
       <button
       className="hover:cursor-pointer flex relative items-center gap-1 bg-gradient-to-r

@@ -8,7 +8,7 @@ function ExperienceText() {
     whileInView="show"
     viewport={{ once: false, amount: 0.2}}
     className='text-center'>
-      <h2 className="text-6xl mb-10 text-cyan">Experience</h2>
+      <h2 className="text-4xl font-bold mb-10 text-cyan">Experience</h2>
     </motion.div>
   )
 }

@@ -26,7 +26,7 @@ const projects = [
 
 const ProjectsMain = () => {
   return (
-    <div id='projects' className='mx-auto max-w-[1200px] mt-[80px] px-10'>
+    <div id='projects' className='mx-auto max-w-[1200px] mt-[80px] px-5 md:px-10'>
       <ProjectsText />
       <ProjectsGroup projects={projects}/>
     </div>

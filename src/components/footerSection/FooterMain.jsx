@@ -24,7 +24,7 @@ const FooterMain = () => {
               smooth={true}
               spy={true}
               duration={1000}
-              offset={link.section === "skills" ? -75 : -130}
+              offset={link.section === "skills" ?  -30 : -75}
               className="hover:text-cyan">
               {link.link}
             </Link>
