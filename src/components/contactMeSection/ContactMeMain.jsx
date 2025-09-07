@@ -17,7 +17,7 @@ const ContactMeMain = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.2 }}
-      className="bg-lightBrown p-2 pt-5 rounded-xl flex flex-col items-center md:flex-row md:justify-between gap-14">
+      className="bg-lightBrown/40 p-2 pt-5 rounded-xl flex flex-col items-center md:flex-row md:justify-between gap-14">
         <ContactMeLeft />
         <ContactMeRight />
       </motion.div>

@@ -56,12 +56,13 @@ const NavbarMain = () => {
         show ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <div className="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between gap-6
-                      bg-darkBrown backdrop-blur-xl rounded-full border border-lightOrange border-y-0">
+      <div className="max-w-6xl mx-auto px-6 z-50 py-3 flex items-center justify-between gap-6
+                      bg-darkBrown rounded-full border border-lightOrange border-y-0 ">
         <NavbarLogo />
         <div className={`${menuOpen ? "block" : "hidden"} absolute w-full left-0 md:relative md:block`}>
           <NavbarLinks toggleMenu={toggleMenu} />
         </div>
+        
         <NavbarBtn />
         <div className="md:hidden">
           <NavbarIcon toggleMenu={toggleMenu} menuOpen={menuOpen} />

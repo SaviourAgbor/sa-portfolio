@@ -71,7 +71,7 @@ const ContactMeLeft = () => {
           Get In Touch
         </h1>
         <p className="text-sm font-bold text-white  italic">
-          Feel free to rech out if you'd like to colaborate <br />
+          Feel free to reach out if you'd like to colaborate <br />
         </p>
         <p className="pt-6 pb-2 font-bold text-white">LET'S CONNECT</p>
       </div>
@@ -80,7 +80,7 @@ const ContactMeLeft = () => {
           initial={{ opacity: 0, y: -70 }}
           animate={{ opacity: 2, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="p-2 mb-2 text-xl text-green-700 w-fit bg-green-100 text-center rounded-lg dark:bg-green-700 dark:text-green-800"
+          className="p-2 mb-2 text-xl text-green-700 w-fit bg-green-100 text-center rounded-lg"
         >
           {successMessage}
         </motion.div>
@@ -91,7 +91,7 @@ const ContactMeLeft = () => {
           initial={{ opacity: 0, y: -70 }}
           animate={{ opacity: 2, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="p-1 mb-2 text-xl text-red-700 w-fit bg-red-100 text-center rounded-lg dark:bg-red-700 dark:text-red-800"
+          className="p-1 mb-2 text-xl text-red-700 w-fit bg-red-100 text-center rounded-lg"
         >
           {errorMessage}
         </motion.div>
